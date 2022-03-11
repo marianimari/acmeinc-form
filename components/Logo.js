@@ -1,5 +1,5 @@
 import Image from "next/image";
-import LogoImage from "./../public/assets/acme.svg";
+import LogoImage from "./../public/assets/acme.png";
 
 const Logo = () => {
   return (

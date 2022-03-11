@@ -22,11 +22,11 @@ const FormGroup = (props) => {
 
   //for Name Input
   useEffect(() => {
-    console.log(name);
+    //console.log(name);
     let char = name.length;
 
     setNameLength(char);
-    console.log(char);
+
     setName(formatTitleCase(name));
     if (char < 3) {
       setMsgNameError("Nama terlalu pendek");
@@ -39,7 +39,7 @@ const FormGroup = (props) => {
 
   //for Phone Input
   useEffect(() => {
-    console.log(phone);
+   // console.log(phone);
 
     let phoneChar = phone.length;
 
@@ -55,7 +55,6 @@ const FormGroup = (props) => {
 
   //for PasswordInputs
   useEffect(() => {
-    console.log(password);
     let passChar = password.length;
     setPassLength(passChar);
     if (passChar < 8 || passChar > 16) {

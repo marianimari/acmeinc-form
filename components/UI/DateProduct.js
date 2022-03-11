@@ -1,4 +1,4 @@
-import Clock from "./../../public/assets/clock.svg";
+import Clock from "./../../public/assets/clock.png";
 import Image from "next/image";
 const DateProduct = (props) => {
   return (
