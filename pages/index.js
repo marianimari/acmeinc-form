@@ -11,7 +11,7 @@ export default function Home() {
       <div className="md:mx-auto max-w-screen-lg px-4 md:px-12 py-10 ">
         <Logo />
 
-        <div className="items-center md:space-x-4 md:flex sm:flex-row md:justify-between md:pb-0 pb-28">
+        <div className="items-center md:space-x-4 md:flex sm:flex-row md:justify-between md:pb-0 pb-24">
           <ProductCard />
           <div
             aria-label="form-wraper"
