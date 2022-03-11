@@ -29,7 +29,8 @@ const PhoneNumberInput = (props) => {
             name="dialcode"
             className="h-full w-[90px] py-0 pl-4 pr-4  bg-transparent text-gray-500 sm:text-sm rounded-xl"
             onChange={(e) => setCountryCode(e.target.value)}
-          >
+      
+         >
             {countries.map((country, index) => (
               <option value={country.callingCodes} key={index}>
                 {country.name}  +{country.callingCodes}  

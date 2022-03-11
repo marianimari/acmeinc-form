@@ -14,7 +14,7 @@ const FormGroup = (props) => {
   const [password, setPassword] = useState("");
   const [msgNameError, setMsgNameError] = useState("");
   const [msgPhoneError, setMsgPhoneError] = useState("");
-  const [msgPassError, setMsgPassError] = useState(false);
+  const [msgPassError, setMsgPassError] = useState("");
   const [nameLength, setNameLength] = useState(0);
   const [passLength, setPassLength] = useState(0);
   const [isSubmitReady, setIsSubmitReady] = useState(false);
