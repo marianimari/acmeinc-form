@@ -86,7 +86,7 @@ const FormGroup = (props) => {
     } else {
       setIsSubmitReady(false);
     }
-  }, [password, name, phone]);
+  }, [msgNameError,  msgPhoneError, msgPassError]);
 
   const handleSubmit = (e) => {
     e.preventDefault();

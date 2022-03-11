@@ -8,7 +8,7 @@ import Price from "./UI/Price";
 import PriceDiscount from "./UI/PriceDiscount";
 import DateProduct from "./UI/DateProduct";
 
-const ProductCard = (props) => {
+const ProductCard = () => {
   const product = {
     label: "penting",
     title: " Jasa Perancangan Website e-Commerce",
@@ -32,9 +32,9 @@ const ProductCard = (props) => {
             <PriceDiscount price={5000000} />
           </div>
           <div className="flex justify-between mt-3 items-center">
-            <DateProduct />
-            <a href="https://www.instagram.com" target="_blank">
-              <Image src={InstaIcon} height={24} width={24} />
+            <DateProduct product="Jasa Perancangan Website e-Commerce"/>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+              <Image src={InstaIcon} height={24} width={24} alt="Insta Icon"/>
             </a>
           </div>
         </div>
