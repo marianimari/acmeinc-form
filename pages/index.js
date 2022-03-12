@@ -15,7 +15,7 @@ export default function Home() {
           <ProductCard />
           <div
             aria-label="form-wraper"
-            className=" relative block md:p-4 px-0 pb-4 mt-6 rounded-lg md:shadow-small bg-transparent md:bg-white md:max-w-sm sm:max-w-full"
+            className=" relative block md:p-4 px-0 pb-4 mt-6 rounded-xl md:shadow-small bg-transparent md:bg-white md:max-w-sm sm:max-w-full"
           >
             <FormGroup/>
       

@@ -1,5 +1,5 @@
 import PhoneNumberInput from "./UI/PhoneNumberInput";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import InputItem from "./UI/InputItem";
 import LabelInput from "./UI/LabelInput";
 import Helper from "./UI/HelperMessage";
@@ -20,9 +20,14 @@ const FormGroup = (props) => {
   const [isSubmitReady, setIsSubmitReady] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
+
+  const isFirstRun = useRef(true);
+  
+
   //for Name Input
   useEffect(() => {
     //console.log(name);
+  
     let char = name.length;
 
     setNameLength(char);
@@ -93,6 +98,9 @@ const FormGroup = (props) => {
     console.log(phone);
     console.log(password);
     setIsSuccess(true);
+    setTimeout(() => {
+        setIsSuccess(false);
+     }, 3000)
   };
 
   return (
