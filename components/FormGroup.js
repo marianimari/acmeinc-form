@@ -102,7 +102,7 @@ const FormGroup = (props) => {
 
   return (
     <>
-      {isSuccess && <ToastRegister message="selamat data anda tersimpan" />}
+      {isSuccess && <ToastRegister message="Data berhasil disimpan" />}
 
       <form
         onSubmit={(e) => {

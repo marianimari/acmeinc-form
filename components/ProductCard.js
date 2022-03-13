@@ -7,18 +7,22 @@ import TitleProduct from "./UI/TitleProduct";
 import Price from "./UI/Price";
 import PriceDiscount from "./UI/PriceDiscount";
 import DateProduct from "./UI/DateProduct";
-import Link from "next/link";
+import ImageDefault from "./../public/assets/images/banner.png";
 
 const ProductCard = () => {
   return (
     <>
       <div className="block rounded-xl shadow-3xl bg-white w-full md:max-w-md border border-dark-100">
-        <ProductImage />
+        <ProductImage
+            src={ImageDefault}  
+            alt="Jasa pembuatan web e-commerce" 
+           
+             />
         <div className="block px-4 pt-3 pb-4">
           <LabelProduct label="penting" />
           <TitleProduct title=" Jasa Perancangan Website e-Commerce" />
           <div className="font-normal text-dark-100 text-sm mt-2">
-            Mulai dari &nbsp;
+            Mulai dari&nbsp;
             <Price price={6000000} />
             &nbsp;
             <PriceDiscount price={5000000} />

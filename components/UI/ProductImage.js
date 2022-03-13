@@ -1,5 +1,4 @@
 import Image from "next/image";
-import ImageDefault from "./../../public/assets/images/banner.png";
 
 // const myLoader = ({ src, width, quality }) => {
 //   return `./../public/assets/images/${src}?w=${width}&q=${quality || 75}`;
@@ -16,13 +15,11 @@ const ProductImage = (props) => {
     // />
     <div className=" relative h-[152px] md:h-[156px] w-full">
       <Image
-      src={ImageDefault}  
-      alt="Jasa pembuatan web e-commerce" 
-      layout="fill"
-      objectFit="cover"
-
-     className="object-center rounded-t-xl w-full" 
-    />
+        {...props}
+        className="object-center rounded-t-xl w-full"
+        layout="fill"
+        objectFit="cover"
+      />
     </div>
   );
 };
