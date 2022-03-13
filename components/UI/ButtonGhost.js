@@ -1,6 +1,6 @@
 import React from "react";
 
-const ButtonGhost = () => {
+const ButtonGhost = (props) => {
   return (
     <>
       <button
@@ -22,7 +22,7 @@ const ButtonGhost = () => {
     duration-200
     ease-in-out"
       >
-        Button
+       {props.text}
       </button>
 </>
   );

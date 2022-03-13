@@ -1,6 +1,6 @@
 import React from "react";
 
-const ButtonPrimary = () => {
+const ButtonPrimary = (props) => {
   return (
     <>
     <button
@@ -27,7 +27,7 @@ const ButtonPrimary = () => {
       active:top-2
       active:shadow-btn-1-active"
       >
-        Button
+       {props.text}
       </button>
   
     

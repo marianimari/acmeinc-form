@@ -167,7 +167,7 @@ const FormGroup = (props) => {
           )}
         </InputGroup>
 
-        <ButtonRegister disabled={!isSubmitReady} />
+        <ButtonRegister text="Submit" disabled={!isSubmitReady} />
       </form>
     </>
   );
