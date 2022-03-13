@@ -7,6 +7,7 @@ import CharacterCheck from "./UI/CharacterCheck";
 import ErorrMessage from "./UI/ErorrMessage";
 import ToastRegister from "./UI/ToastRegister";
 import ButtonRegister from "./UI/ButtonRegister";
+import InputGroup from "./UI/InputGroup";
 
 const FormGroup = (props) => {
   const [name, setName] = useState("");
@@ -20,14 +21,12 @@ const FormGroup = (props) => {
   const [isSubmitReady, setIsSubmitReady] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
-
   const isFirstRun = useRef(true);
-  
 
   //for Name Input
   useEffect(() => {
     //console.log(name);
-  
+
     let char = name.length;
 
     setNameLength(char);
@@ -44,7 +43,7 @@ const FormGroup = (props) => {
 
   //for Phone Input
   useEffect(() => {
-   // console.log(phone);
+    // console.log(phone);
 
     let phoneChar = phone.length;
 
@@ -66,10 +65,8 @@ const FormGroup = (props) => {
       setMsgPassError(
         "Kata sandi harus mengandung 8-16 karakter, kombinasi huruf besar, huruf kecil, dan angka"
       );
-    } else if(
-       password.match(
-        /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*?]{6,}$/
-        )
+    } else if (
+      password.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*?]{6,}$/)
     ) {
       setMsgPassError("");
     } else {
@@ -90,7 +87,7 @@ const FormGroup = (props) => {
     } else {
       setIsSubmitReady(false);
     }
-  }, [msgNameError,  msgPhoneError, msgPassError]);
+  }, [msgNameError, msgPhoneError, msgPassError]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -99,8 +96,8 @@ const FormGroup = (props) => {
     console.log(password);
     setIsSuccess(true);
     setTimeout(() => {
-        setIsSuccess(false);
-     }, 3000)
+      setIsSuccess(false);
+    }, 3000);
   };
 
   return (
@@ -112,7 +109,7 @@ const FormGroup = (props) => {
           handleSubmit(e);
         }}
       >
-        <div className="form-group mb-5">
+        <InputGroup>
           <div className="flex justify-between">
             <LabelInput label="Nama Lengkap" />
             <CharacterCheck
@@ -132,9 +129,9 @@ const FormGroup = (props) => {
           ) : (
             <Helper message="" />
           )}
-        </div>
+        </InputGroup>
 
-        <div className="form-group mb-5">
+        <InputGroup>
           <div className="flex justify-between">
             <LabelInput label="Nomor Telepon" />
           </div>
@@ -144,9 +141,9 @@ const FormGroup = (props) => {
           ) : (
             <Helper message="Pilih kode negara, diikuti dengan nomor HPmu" />
           )}
-        </div>
+        </InputGroup>
 
-        <div className="form-group mb-5">
+        <InputGroup>
           <div className="flex justify-between">
             <LabelInput label="Kata Sandi" />
 
@@ -168,7 +165,8 @@ const FormGroup = (props) => {
           ) : (
             <Helper message="Kata sandi harus mengandung 8-16 karakter, kombinasi huruf besar, huruf kecil, dan angka" />
           )}
-        </div>
+        </InputGroup>
+
         <ButtonRegister disabled={!isSubmitReady} />
       </form>
     </>

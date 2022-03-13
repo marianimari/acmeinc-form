@@ -1,17 +1,13 @@
-import styles from "../styles/Home.module.css";
 import FormGroup from "../components/FormGroup";
 import ProductCard from "../components/ProductCard";
 import Logo from "../components/Logo";
-import ButtonRegister from "../components/UI/ButtonRegister";
-import ToastRegister from "../components/UI/ToastRegister";
 
 export default function Home() {
   return (
     <>
       <div className="md:mx-auto max-w-screen-lg px-4 md:px-12 py-10 ">
         <Logo />
-
-        <div className="items-center md:space-x-4 md:flex sm:flex-row md:justify-between md:pb-0 pb-24">
+        <div className="items-center md:space-x-4 md:flex sm:flex-row md:justify-between md:pb-0 pb-[30px]">
           <ProductCard />
           <div
             aria-label="form-wraper"
